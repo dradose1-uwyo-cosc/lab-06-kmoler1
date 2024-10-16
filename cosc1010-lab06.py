@@ -109,3 +109,5 @@ print(f"The letter that occurred the most is {least_occurred}")
 print("*"*75)
 
 # Output what the percentage of the string each character is, again in alphabetical
+for character in letters:
+   print(f"{character}: {(letters[character]/len(random_string)*100):.2f}%")
