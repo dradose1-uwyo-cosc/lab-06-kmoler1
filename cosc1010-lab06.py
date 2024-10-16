@@ -1,12 +1,11 @@
-# Your Name Here
+# Kaleb Moler
 # UWYO COSC 1010
-# Submission Date
+# 10/15/24
 # Lab 06
-# Lab Section: 
+# Lab Section: 15
 # Sources, people worked with, help given to: 
-# your
-# comments
-# here
+# Jay Trujio, Jhett Carr
+
 
 
 random_string = """
@@ -82,14 +81,26 @@ print(len(random_string)) # Print out the size for reference
 
 #Load all the elements into a dictionary
 #Will need to first declare a dictionary 
+letters={}
 
+random_string=sorted(random_string)
+for character in random_string:
+    if(letters.get(character)):
+      letters[character]+=1
+    else:
+      letters[character]=1
 # Output: each letter and its corresponding occurrence in alphabetical order
-
+most_occurred="a"
+least_occurred="a"
+for character in letters:
+   print (f"{character}: {letters[character]}")
+   if(letters[character]>letters[most_occurred]):
+      most_occurred=character
+   elif(letters[character]<letters[least_occurred]):
+      least_occurred=character
 print("*"*75)
 # Output which letter occurred the most 
 
-most_occurred = ""
-least_occurred = ""
 
 print(f"The letter that occurred the most is {most_occurred}")
 print("*"*75)
